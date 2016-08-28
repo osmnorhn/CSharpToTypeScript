@@ -32,7 +32,7 @@ namespace CSharpToTypeScript
         private void btnConvert_Click(object sender, EventArgs e)
         {
             string sourcePath = tbSource.Text;
-            string destPath = tbDestination.Text + @"\entities.ts";
+            string destPath = AppDomain.CurrentDomain.BaseDirectory + @"\" + tbDestination.Text;
             try
             {
                 Assembly asm = Assembly.UnsafeLoadFrom(sourcePath);
