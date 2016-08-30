@@ -18,7 +18,7 @@ namespace CSharpToTypeScript
         public Form1()
         {
             InitializeComponent();
-            tbDestination.Text =  AppDomain.CurrentDomain.BaseDirectory;
+            tbDestination.Text =  "entities.ts";
         }
 
         private void tbSource_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace CSharpToTypeScript
                         sw.WriteLine(code);
                     }
                 }
-                MessageBox.Show("Entity was successfully created in the path : " + tbDestination.Text);
+                MessageBox.Show("Entity was successfully created in the path : " + destPath);
             }
             catch (ReflectionTypeLoadException ex)
             {
